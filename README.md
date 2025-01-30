@@ -9,7 +9,7 @@ just `edit` create_users.ps1 then execute below command on powershell as an admi
 
 <img width="939" alt="image" src="https://github.com/user-attachments/assets/4b139af0-2429-485b-b640-38354b1bf675" />
 
-for remove users `edit` remove_users.ps1 file
+for remove users `edit` delete_users.ps1 file
 
 <img width="477" alt="image" src="https://github.com/user-attachments/assets/4010c2b9-6c37-4825-9d3b-c40b0d56b71f" />
 
