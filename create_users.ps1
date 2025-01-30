@@ -11,7 +11,7 @@ for ($i = 1; $i -le $UserCount; $i++) {
     $SamAccountName = $UserName
     $UserPrincipalName = "$UserName@collab.local"
     $Email = "$UserName@collab.local"
-    $PhoneNumber = "100$($i.ToString("0"))"
+    $PhoneNumber = "1$($i.ToString("0000"))"  # 4 haneli telefon numarası formatı
 
     # Kullanıcıyı oluştur
     New-ADUser -Name $UserName -GivenName $GivenName -Surname $Surname -SamAccountName $SamAccountName -UserPrincipalName $UserPrincipalName -Path $OUPath -AccountPassword (ConvertTo-SecureString $Password -AsPlainText -Force) -Enabled $true
@@ -29,5 +29,5 @@ for ($i = 1; $i -le $UserCount; $i++) {
     # Kullanıcıyı etkinleştir
     Enable-ADAccount -Identity $SamAccountName
 
-    Write-Host "? Kullanıcı $UserName başarıyla oluşturuldu ve yapılandırıldı."
+    Write-Host "? Kullanıcı $UserName başarıyla oluşturuldu ve yapılandırıldı. Telefon: $PhoneNumber"
 }
